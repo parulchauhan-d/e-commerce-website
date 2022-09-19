@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> e-Shopping bag</title>
+    <link rel="stylesheet" href="login.CSS">
+    
+</head>
+<body onload="slider()">
+    <div class="banner">
+        <div class="slider">
+             <img src="imglog/slide1.jpg" id="slideimg">
+        </div>
+        <div class="overlay">
+             <div class="navbar">
+                 <div class="logo">
+                     <img src="imglog/logo.png" alt="">
+                 </div>
+                 <div class="button">
+                     <button class="btn1" onclick="document.getElementById('login-form').style.display='block'" style="width:auto;
+                     ">log in</button>
+                 </div>
+             </div>
+        </div>
+        <div id="login-form" class="login-page">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                         <button type="button" onclick="login()" class="toggle-btn">log in</button>
+                         <button type="button" onclick="register()" class="toggle-btn">Register</button>
+                </div>
+                <form name="myForm" id="login" class="input-group-login" action="home.html">
+                    <input type="text"  id="email" class="input-field" placeholder="Email Id" required>
+                    <input type="password" id="Pass" class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="check-box"> <span>Remember Password</span>
+                    <button type="submit" class="submit-btn" onclick="myFunction()">Log in</button>           
+                </form>
+
+                <form id="register" class="input-group-register">
+                    <input type="text" class="input-field" placeholder="First Name" required>
+                    <input type="text" class="input-field" placeholder="Last Name" required>
+                    <input type="email" class="input-field" placeholder="Email Id" required>
+                    <input type="password" class="input-field" placeholder="Enter Password" required>
+                    <input type="password" class="input-field" placeholder="Confirm Password" required>
+                    <input type="checkbox" class="check-box"> <span>I agree to the terms and conditions</span>
+                    <button type="submit" class="submit-btn">Register</button>              
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script>
+        var slideimg = document.getElementById("slideimg");
+        var images = new Array(
+            "imglog/slide1.jpg",
+            "imglog/slide2.jpg",
+            "imglog/slide4.jpg",
+            "imglog/slide5.jpg",
+            "imglog/slide6.jpg"
+          );
+
+          var len = images.length;
+          var i=0;
+          function slider()
+          {
+            if(i > len-1)
+            {
+                i=0;
+            }
+            slideimg.src = images[i];
+            i++;
+            setTimeout('slider()',3000);
+          }
+
+          var x = document.getElementById('login');
+          var y = document.getElementById('register');
+          var z = document.getElementById('btn');
+          function register()
+          {
+              x.style.left='-400px';
+              y.style.left='50px';
+              z.style.left='110px';
+          }
+
+          function login()
+          {
+            x.style.left='50px';
+              y.style.left='450px';
+              z.style.left='0px';
+          }
+    </script>
+    <script>
+        var modal = document.getElementById('login-form');
+        window.onclick=function(event)
+        {
+            if(event.target == modal)
+            {
+                    modal.style.display="none";
+            }
+        }
+    </script>
+    <!-- <script>
+        function myFunction()
+        {
+            var un = document.forms["login"]["email"].value;
+            var pw = document.forms["login"]["Pass"].value;
+            if(un=="parulchauhan0555@gmail.com" && pw=="1234")
+            {
+                   window.location.href="home.html";
+            }
+            else
+            {
+                alert("Invalid UserName and Password");
+            }
+        }  
+    </script>
+     -->
+</body>
+</html>

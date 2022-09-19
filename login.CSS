@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.banner{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.slider{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+}
+#slideimg{
+    width: 100%;
+    height: 100%;
+    animation: zoom 3s linear infinite;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1.3);
+    }
+    15%{
+        transform: scale(1);
+    }
+    85%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.3);
+    }
+    
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+    position: absolute;
+    top: 0;
+
+}
+.navbar{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+}
+.logo{
+    flex-basis: 15%;
+    opacity: 0.3;
+    background-image: radial-gradient();
+}
+.logo img{
+    width: 180px;
+    cursor: pointer;
+    color: whitesmoke;
+}
+
+.button{
+    padding-left: 130vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-wrap: nowrap;
+}
+
+.btn1{
+    width: 70px;
+    padding: 10px 10px;
+    background-color: grey;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 10px;
+    height: 35px;
+}
+
+.card{
+    width: 350px;
+    height: 500px;
+    box-shadow: 0 0 40px 20px rgba(0,0,0,0.26);
+}
+
+#login-form{
+    display: none;
+}
+.form-box{
+    width: 380px;
+    height: 480px;
+    position: relative;
+    margin: 12% auto; 
+    background: rgba(0,0,0,0.7);
+    padding: 10px;
+    overflow: hidden;
+}
+
+.button-box{
+          width: 220px;
+          margin: 35px auto;
+          position: relative;
+          box-shadow: 0 0 20px 9px #ff61241f;
+          border-radius: 30px;
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    color: white;
+}
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: #f3c693;
+    border-radius: 30px;
+    transition: .5sec;
+}
+.input-group-login{
+    top: 150px;
+    position: absolute;
+    width: 280px;
+    transition: .5sec;
+}
+.input-group-register{
+    top: 120px;
+    position: absolute;
+    width: 280px;
+    transition: .5px;
+}
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background:transparent;
+}
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: #f3c693;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.check-box{
+    margin: 30px 10px 34px 0;
+}
+span{
+    color: #777;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+#login{
+    left: 50px;
+}
+#login input{
+    color: white;
+    font-size: 15;
+}
+#register{
+    left: 450px;
+}
+#register input{
+    color: white;
+    font-size: 15;
+}
